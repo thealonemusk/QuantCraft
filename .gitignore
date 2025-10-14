@@ -1,0 +1,38 @@
+# CMake
+/CMakeFiles/
+/CMakeCache.txt
+/cmake_install.cmake
+/Makefile
+
+# Build output
+/build/
+/Release/
+/Debug/
+
+# Visual Studio
+*.sln
+*.vcxproj*
+*.vcproj*
+*.user
+*.opensdf
+*.sdf
+*.ipch/
+*.vcxproj.filters
+
+# Visual Studio Code
+.vscode/
+
+# Generated files
+*.o
+*.obj
+*.exe
+*.dll
+*.lib
+*.pdb
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# OneDrive temp files
+~$*
