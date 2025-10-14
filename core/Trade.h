@@ -1,11 +1,11 @@
 #pragma once
 #include <string>
 #include "Order.h"
-
+using namespace std;
 struct Trade {
-    std::string symbol;
+    string symbol;
     double price;
     int quantity;
-    std::string timestamp;
+    string timestamp;
     Side side;
 };

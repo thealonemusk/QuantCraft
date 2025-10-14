@@ -1,15 +1,15 @@
 #pragma once
 #include <string>
-
+using namespace std;
 enum class OrderType { MARKET, LIMIT };
 enum class Side { BUY, SELL };
 
 struct Order {
     int id;
-    std::string symbol;
+    string symbol;
     OrderType type;
     Side side;
     double price;
     int quantity;
-    std::string timestamp;
+    string timestamp;
 };
