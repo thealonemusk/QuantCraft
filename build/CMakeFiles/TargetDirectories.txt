@@ -1,0 +1,3 @@
+/home/runner/work/QuantCraft/QuantCraft/build/CMakeFiles/quantcraft.dir
+/home/runner/work/QuantCraft/QuantCraft/build/CMakeFiles/edit_cache.dir
+/home/runner/work/QuantCraft/QuantCraft/build/CMakeFiles/rebuild_cache.dir

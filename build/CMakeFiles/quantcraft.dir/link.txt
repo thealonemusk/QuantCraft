@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/quantcraft.dir/link.d CMakeFiles/quantcraft.dir/main.cpp.o CMakeFiles/quantcraft.dir/core/Backtester.cpp.o CMakeFiles/quantcraft.dir/core/ExecutionEngine.cpp.o CMakeFiles/quantcraft.dir/core/Portfolio.cpp.o CMakeFiles/quantcraft.dir/strategies/MeanReversion.cpp.o CMakeFiles/quantcraft.dir/strategies/Momentum.cpp.o -o quantcraft
