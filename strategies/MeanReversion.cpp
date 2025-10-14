@@ -1,22 +1,22 @@
 #include "MeanReversion.h"
 #include <numeric>
 #include <cmath>
-
+using namespace std;
 MeanReversion::MeanReversion(int windowSize, double threshold)
     : windowSize(windowSize), threshold(threshold) {}
 
-void MeanReversion::onData(const std::string& timestamp, double price) {
+void MeanReversion::onData(const string& timestamp, double price) {
     priceWindow.push_back(price);
     if (priceWindow.size() > windowSize) {
         priceWindow.pop_front();
     }
 }
 
-std::vector<Order> MeanReversion::generateSignals() {
-    std::vector<Order> signals;
+vector<Order> MeanReversion::generateSignals() {
+    vector<Order> signals;
     if (priceWindow.size() < windowSize) return signals;
 
-    double mean = std::accumulate(priceWindow.begin(), priceWindow.end(), 0.0) / windowSize;
+    double mean = accumulate(priceWindow.begin(), priceWindow.end(), 0.0) / windowSize;
     double lastPrice = priceWindow.back();
 
     if (lastPrice < mean * (1 - threshold)) {
