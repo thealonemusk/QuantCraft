@@ -21,3 +21,9 @@ public:
 protected:
     string sourcePath;
 };
+// Simple CSV-backed loader (declaration here, implementation in MarketDataLoader.cpp)
+class CSVMarketDataLoader : public MarketDataLoader {
+public:
+    explicit CSVMarketDataLoader(const string& filename) : MarketDataLoader(filename) {}
+    vector<Bar> loadData() const override;
+};
