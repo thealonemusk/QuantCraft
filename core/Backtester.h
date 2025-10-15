@@ -5,13 +5,16 @@
 #include "ExecutionEngine.h"
 #include "../strategies/Strategy.h"
 #include "Portfolio.h"
+#include "TradeLogger.h"
 using namespace std;
+
 class Backtester {
 public:
     Backtester(shared_ptr<MarketDataLoader> loader,
                vector<shared_ptr<Strategy>> strategies,
                shared_ptr<ExecutionEngine> engine,
-               Portfolio& portfolio);
+               Portfolio& portfolio,
+               shared_ptr<TradeLogger> logger = nullptr);
 
     void run();
 
@@ -20,4 +23,5 @@ private:
     vector<shared_ptr<Strategy>> strategies;
     shared_ptr<ExecutionEngine> engine;
     Portfolio& portfolio;
+    shared_ptr<TradeLogger> logger;
 };
